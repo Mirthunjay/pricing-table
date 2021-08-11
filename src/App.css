@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+*{
+  font-family: "Inter", sans-serif;
+  padding:0px;
+  margin: 0px;
+}
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #0163E6;
+}
+
+.outer-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+}
+
+
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+h5.subcription {
+  letter-spacing: 0.2rem;
+  color: darkgray;
+}
+
+span.price {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.line {
+  border: 1px solid darkgray;
+  background-color: darkgray ;
+  width: 100%;
+  max-width: calc(100% - 50px);
+  margin-bottom: 1rem;
+}
+
+ul.content {
+  list-style: none;
+  line-height: 2.5rem;
+  width: 100%;
+  padding-left: 3.5rem;
+  font-weight: 500;
+}
+
+.content li:before {
+  content: " ✔ ";
+  font-weight: bolder;
+  font-size: 1rem;
+  padding-right: 7px;
+}
+
+
+
+button.button-name {
+  border: none;
+  background-color: #569AFE;
+  color: white;
+  width: 100%;
+  max-width: calc(100% - 50px);
+  height: 2.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin: 1rem;
+}
+
+button.button-name:hover {
+  background-color: #0163e6;
+}
+
+.inner-box:first-child .content li:nth-child(n+5){
+  opacity: 0.4;
+}
+
+.inner-box:first-child .content li:nth-child(n+5)::before{
+  content: " ✖ ";
+  font-weight: bolder;
+  font-size: 1rem;
+  padding-right: 7px;
+  opacity: 0.4;
+}
+
+.inner-box:nth-child(2) .content li:last-child{
+  opacity: 0.4;
+}
+
+.inner-box:nth-child(2) .content li:last-child::before{
+  content: " ✖ ";
+  font-weight: bolder;
+  font-size: 1rem;
+  padding-right: 7px;
+  opacity: 0.4;
+}
+
+@media (min-width:950px){
+
+  .outer-box{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .inner-box:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 30%);
+  }
+}
